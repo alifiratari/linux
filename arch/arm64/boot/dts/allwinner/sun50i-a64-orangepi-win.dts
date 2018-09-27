@@ -120,6 +120,22 @@
 	status = "okay";
 };
 
+&i2c0 {
+	pinctrl-names = "default";
+	pinctrl-0 = <&i2c0_pins>;
+	status = "okay";
+
+	ctp@14 {
+		pinctrl-names = "default";
+		pinctrl-0 = <&gt911_int_opiwin>;
+		compatible = "goodix,gt911";
+		reg = <0x14>;
+		interrupt-parent = <&pio>;
+		interrupts = <7 8 IRQ_TYPE_LEVEL_HIGH>; /* PH7 */
+		touchscreen-swapped-x-y;
+	};
+};
+
 &ehci1 {
 	status = "okay";
 };
