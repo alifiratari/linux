@@ -616,6 +616,16 @@
 				pins = "PD4", "PD5";
 				function = "uart4";
 			};
+			
+			gt911_int_opiwin: gt911_int_opiwin {
+				pins = "PH8";
+				function = "gpio_out";
+			};
+			
+			gt911_rst_opiwin: gt911_rst_opiwin {
+				pins = "PH10";
+				function = "gpio_in";
+			};
 		};
 
 		spdif: spdif@1c21000 {
