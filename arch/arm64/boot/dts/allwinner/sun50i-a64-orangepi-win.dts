@@ -328,8 +328,11 @@
 
 &simplefb_hdmi {
 	vcc-hdmi-supply = <&reg_dldo1>;
-	status = "okay";
 };
+
+&mali {
+	status = "okay";
+}
 
 &spi0 {
 	status = "okay";
